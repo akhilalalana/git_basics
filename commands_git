@@ -1,0 +1,79 @@
+# Step-by-step
+mkdir myproject
+cd myproject
+git init                        # Start a new Git repo
+code . or open your files       # Create & edit your code files
+git add .                       # Stage changes
+git commit -m "Initial commit"  # Commit
+git remote add origin <URL>     # Connect to GitHub repo
+git push -u origin main         # Push to remote (first time use -u)
+
+
+# Modify code files
+git add .
+git commit -m "Updated feature"
+git push         # Push to GitHub
+
+git clone <URL>                 # Copy repo from GitHub to your computer
+cd repo-name
+# Make your changes
+git add .
+git commit -m "Changed something"
+git push
+
+basic commands:
+| Command                                            | Purpose                                               |
+| -------------------------------------------------- | ----------------------------------------------------- |
+| `git init`                                         | Start a new Git repository in your current folder     |
+| `git clone <repo-url>`                             | Copy (download) a GitHub repo to your computer        |
+| `git status`                                       | See current status (tracked/untracked/modified files) |
+| `git add <file>` or `git add .`                    | Stage changes for commit                              |
+| `git commit -m "message"`                          | Save changes with a message                           |
+| `git push`                                         | Upload your commits to GitHub                         |
+| `git pull`                                         | Download latest changes from GitHub                   |
+| `git remote -v`                                    | Show connected GitHub remote URLs                     |
+| `git log`                                          | View commit history                                   |
+| `git config --global user.name "Your Name"`        | Set your Git name                                     |
+| `git config --global user.email "you@example.com"` | Set your Git email                                    |
+
+
+
+branch :
+
+| Command                  | Purpose                                   |
+| ------------------------ | ----------------------------------------- |
+| `git branch`             | Show branches                             |
+| `git branch <name>`      | Create a new branch                       |
+| `git checkout <name>`    | Switch to another branch                  |
+| `git checkout -b <name>` | Create and switch to a new branch         |
+| `git merge <branch>`     | Merge another branch into the current one |
+| `git branch -d <name>`   | Delete a branch (after merging)           |
+
+undo/restore command:
+
+| Command                       | Purpose                                |
+| ----------------------------- | -------------------------------------- |
+| `git restore <file>`          | Discard local changes (undo edits)     |
+| `git restore --staged <file>` | Unstage a file (remove from `git add`) |
+| `git reset`                   | Unstage all files                      |
+| `git reset --hard`            | Remove all local changes (⚠️ careful!) |
+
+remote :
+
+| Command                       | Purpose                                  |
+| ----------------------------- | ---------------------------------------- |
+| `git remote add origin <url>` | Link local repo to GitHub                |
+| `git push -u origin main`     | Push and track the remote branch         |
+| `git fetch`                   | Get changes from remote without merging  |
+| `git pull`                    | Get changes and merge from remote branch |
+| `git push`                    | Push your commits to GitHub              |
+
+other useful commands:
+
+| Command             | Purpose                                |
+| ------------------- | -------------------------------------- |
+| `git diff`          | Show differences in code before commit |
+| `git diff --staged` | Show differences for staged files      |
+| `git show <commit>` | View details of a commit               |
+| `git tag`           | Show or add tags (for releases)        |
+
